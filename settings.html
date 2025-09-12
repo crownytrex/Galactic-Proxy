@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galactic Settings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>⚙️ Settings</h1>
+  <label style="margin-bottom: 20px;">
+    <input type="checkbox" id="advancedCloakToggle" />
+    Enable Advanced Cloaking
+  </label>
+  <p class="footer">When enabled, URLs will auto-launch in about:blank</p>
+
+  <script>
+    document.getElementById("advancedCloakToggle").addEventListener("change", (e) => {
+      localStorage.setItem("advancedCloak", e.target.checked ? "true" : "false");
+    });
+
+    // Load saved state
+    window.onload = () => {
+      const saved = localStorage.getItem("advancedCloak");
+      if (saved === "true") {
+        document.getElementById("advancedCloakToggle").checked = true;
+      }
+    };
+  </script>
+</body>
+</html>
