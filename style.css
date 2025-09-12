@@ -90,3 +90,21 @@ button:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
+.settings-btn {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8a2be2, #4b0082);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
