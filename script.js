@@ -1,10 +1,13 @@
-// Launch the cloaked iframe in about:blank
+// Launch a cloaked iframe in about:blank using stored settings
 function launchCloak() {
   const url = document.getElementById('urlInput').value.trim();
   if (!url) {
     alert('Please enter a valid URL.');
     return;
   }
+
+  const tabTitle = localStorage.getItem("cloakTabTitle") || "Cloaked Tab";
+  const favicon = localStorage.getItem("cloakFavicon") || "";
 
   const win = window.open('about:blank', '_blank');
   if (!win) {
@@ -19,7 +22,8 @@ function launchCloak() {
     <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>Cloaked Content</title>
+      <title>${tabTitle}</title>
+      ${favicon ? `<link rel="icon" href="${favicon}" type="image/png">` : ""}
       <style>
         body, html {
           margin: 0;
@@ -42,6 +46,11 @@ function launchCloak() {
   doc.close();
 }
 
+// Manual cloak button
+document.getElementById('cloakBtn').addEventListener('click', () => {
+  launchCloak();
+});
+
 // Open the current interface in about:blank
 document.getElementById('openSelfBtn').addEventListener('click', () => {
   const htmlContent = document.documentElement.outerHTML;
@@ -55,21 +64,11 @@ document.getElementById('openSelfBtn').addEventListener('click', () => {
   win.document.close();
 });
 
-// Manual cloak button
-document.getElementById('cloakBtn').addEventListener('click', () => {
-  launchCloak();
-});
-
-// Auto-launch if advanced cloaking is enabled
-window.addEventListener('load', () => {
-  const autoCloak = localStorage.getItem('advancedCloak') === 'true';
-  const url = document.getElementById('urlInput').value.trim();
-  if (autoCloak && url) {
-    launchCloak();
-  }
-});
-
+// Launch music portal cloaked
 document.getElementById('musicBtn').addEventListener('click', () => {
+  const tabTitle = localStorage.getItem("cloakTabTitle") || "Music Portal";
+  const favicon = localStorage.getItem("cloakFavicon") || "";
+
   const win = window.open('about:blank', '_blank');
   if (!win) {
     alert('Popup blocked. Please allow popups for this site.');
@@ -83,7 +82,8 @@ document.getElementById('musicBtn').addEventListener('click', () => {
     <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>Music Portal</title>
+      <title>${tabTitle}</title>
+      ${favicon ? `<link rel="icon" href="${favicon}" type="image/png">` : ""}
       <style>
         body, html {
           margin: 0;
@@ -106,3 +106,11 @@ document.getElementById('musicBtn').addEventListener('click', () => {
   doc.close();
 });
 
+// Auto-launch if advanced cloaking is enabled
+window.addEventListener('load', () => {
+  const autoCloak = localStorage.getItem('advancedCloak') === 'true';
+  const url = document.getElementById('urlInput').value.trim();
+  if (autoCloak && url) {
+    launchCloak();
+  }
+});
