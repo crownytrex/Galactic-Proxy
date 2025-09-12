@@ -7,24 +7,46 @@
 </head>
 <body>
   <h1>⚙️ Settings</h1>
-  <label style="margin-bottom: 20px;">
+
+  <label>
     <input type="checkbox" id="advancedCloakToggle" />
     Enable Advanced Cloaking
   </label>
-  <p class="footer">When enabled, URLs will auto-launch in about:blank</p>
+  <br><br>
+
+  <label>
+    Cloaked Tab Title: <br>
+    <input type="text" id="tabTitleInput" placeholder="e.g. Homework" />
+  </label>
+  <br><br>
+
+  <label>
+    Favicon Image URL: <br>
+    <input type="text" id="faviconInput" placeholder="e.g. https://example.com/favicon.png" />
+  </label>
+
+  <p class="footer">Settings are saved automatically</p>
 
   <script>
+    // Load saved settings
+    window.onload = () => {
+      document.getElementById("advancedCloakToggle").checked = localStorage.getItem("advancedCloak") === "true";
+      document.getElementById("tabTitleInput").value = localStorage.getItem("cloakTabTitle") || "";
+      document.getElementById("faviconInput").value = localStorage.getItem("cloakFavicon") || "";
+    };
+
+    // Save settings on change
     document.getElementById("advancedCloakToggle").addEventListener("change", (e) => {
       localStorage.setItem("advancedCloak", e.target.checked ? "true" : "false");
     });
 
-    // Load saved state
-    window.onload = () => {
-      const saved = localStorage.getItem("advancedCloak");
-      if (saved === "true") {
-        document.getElementById("advancedCloakToggle").checked = true;
-      }
-    };
+    document.getElementById("tabTitleInput").addEventListener("input", (e) => {
+      localStorage.setItem("cloakTabTitle", e.target.value);
+    });
+
+    document.getElementById("faviconInput").addEventListener("input", (e) => {
+      localStorage.setItem("cloakFavicon", e.target.value);
+    });
   </script>
 </body>
 </html>
