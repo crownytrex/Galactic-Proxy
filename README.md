@@ -61,4 +61,4 @@ This project is open-source and available under the MIT License.
 Feel free to fork, improve, and submit pull requests. Whether it's UI enhancements, new features, or bug fixes—your contributions are welcome!
 
 🌠 Credits
-Created with stardust and code by [Your Name]. Favicon artwork courtesy of Imgur.
+Created with stardust and code by crownytrex. Favicon artwork courtesy of crownytrex.
