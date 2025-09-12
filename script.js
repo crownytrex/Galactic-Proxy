@@ -33,3 +33,16 @@ document.getElementById('cloakBtn').addEventListener('click', () => {
   `);
   doc.close();
 });
+
+document.getElementById('openSelfBtn').addEventListener('click', () => {
+  const htmlContent = document.documentElement.outerHTML;
+  const win = window.open('about:blank', '_blank');
+  if (!win) {
+    alert('Popup blocked. Please allow popups for this site.');
+    return;
+  }
+  win.document.open();
+  win.document.write(htmlContent);
+  win.document.close();
+});
+
