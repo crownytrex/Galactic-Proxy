@@ -68,3 +68,41 @@ window.addEventListener('load', () => {
     launchCloak();
   }
 });
+
+document.getElementById('musicBtn').addEventListener('click', () => {
+  const win = window.open('about:blank', '_blank');
+  if (!win) {
+    alert('Popup blocked. Please allow popups for this site.');
+    return;
+  }
+
+  const doc = win.document;
+  doc.open();
+  doc.write(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Music Portal</title>
+      <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          overflow: hidden;
+        }
+        iframe {
+          width: 100%;
+          height: 100vh;
+          border: none;
+        }
+      </style>
+    </head>
+    <body>
+      <iframe src="https://umbra-iota.vercel.app/"></iframe>
+    </body>
+    </html>
+  `);
+  doc.close();
+});
+
