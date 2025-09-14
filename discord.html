@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discord Chat</title>
+  <title>Galactic Proxy Discord Chat</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #0d0d2b;
+      background-color: #0d0d2b;
       font-family: 'Segoe UI', sans-serif;
     }
 
     #discord-container {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       position: relative;
       overflow: hidden;
     }
@@ -26,11 +26,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
   <script>
-    new Crate({
-      server: '1416650085265182822', // Galactic Proxy
-      channel: '1416650330774437978', // #🔗links
-      container: '#discord-container'
-    });
+    window.onload = () => {
+      new Crate({
+        server: '1416650085265182822', // Galactic Proxy
+        channel: '1416650330774437978', // #🔗links
+        container: '#discord-container'
+      });
+    };
   </script>
 </body>
 </html>
