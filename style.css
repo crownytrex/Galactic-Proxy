@@ -209,3 +209,31 @@ button:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
+.discord-toggle-btn {
+  position: absolute;
+  top: 370px; /* adjust as needed */
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #5865F2, #404EED);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
+}
+
+.discord-toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+#discord-container {
+  width: 80%;
+  height: 600px;
+  margin: 40px auto 0;
+  display: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
