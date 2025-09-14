@@ -4,10 +4,39 @@
   <meta charset="UTF-8" />
   <title>DuckMath – Sponsor</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #6a0dad, #000000);
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 10;
+      position: relative;
+    }
+
+    iframe {
+      position: absolute;
+      top: 80px; /* height of header */
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 80px);
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>🦆 DuckMath – Sponsor</h1>
-       <a href="https://duck.alltutors.org/" target="_blank"></a>
-  <div class="footer">Thank you for supporting DuckMath!</div>
+  <header>🦆 DuckMath – Sponsor</header>
+  <iframe src="https://duck.alltutors.org"></iframe>
 </body>
 </html>
