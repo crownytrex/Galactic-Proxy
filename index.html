@@ -9,33 +9,39 @@
 </head>
 <body>
   <a href="https://github.com/crownytrex/HtmlCustomGSForSis/raw/refs/heads/main/Galactic%20Proxy.zip" 
-   class="download-btn" 
-   download>
-  ⬇️ Download Galactic Proxy
-</a>
+     class="download-btn" 
+     download>⬇️ Download Galactic Proxy</a>
+
   <a href="settings.html" class="settings-btn">⚙️ Settings</a>
   <button id="openSelfBtn">🪐 Open in about:blank</button>
   <a href="duckmath.html" class="duckmath-btn">🦆 DuckMath – Sponsor</a>
   <button id="musicBtn">🎵 Launch Music Portal</button>
   <button class="discord-toggle-btn" onclick="openDiscord()">💬 Open Discord Chat</button>
-<div id="discord-container"></div>
-<a href="https://discord.gg/Bg5TrNasHP" target="_blank" class="discord-btn">💬 Discord</a>
-
+  <div id="discord-container"></div>
+  <a href="https://discord.gg/Bg5TrNasHP" target="_blank" class="discord-btn">💬 Discord</a>
 
   <a href="https://github.com/crownytrex/HtmlCustomGSForSis" 
-   target="_blank" 
-   class="github-btn">
-  🧠 View on GitHub
-</a>
+     target="_blank" 
+     class="github-btn">🧠 View on GitHub</a>
+
   <h1>🌌 Galactic Cloak</h1>
-  <input
-    type="text"
-    id="urlInput"
-    placeholder="Enter URL (e.g. https://example.com)"
-  />
+  <input type="text" id="urlInput" placeholder="Enter URL (e.g. https://example.com)" />
   <button id="cloakBtn">Cloak & Launch</button>
   <div class="footer">Galactic Proxy cloak by @crownytrex</div>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
+  <script>
+    function openDiscord() {
+      const container = document.getElementById('discord-container');
+      container.style.display = 'block';
+
+      new Crate({
+        server: '1416650085265182822', // Galactic Proxy
+        channel: '1416650330774437978', // #🔗links
+        container: '#discord-container'
+      });
+    }
+  </script>
 </body>
 </html>
