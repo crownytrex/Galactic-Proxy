@@ -169,23 +169,23 @@ button:hover {
 }
 .discord-btn {
   position: absolute;
-  top: 320px; /* consistent vertical spacing */
+  top: 320px;
   left: 20px;
-  padding: 10px 20px; /* same padding as other buttons */
-  font-size: 1em;      /* same font size */
+  padding: 10px 20px;
+  font-size: 1em;
   border-radius: 8px;
-  background: linear-gradient(90deg, #5865F2, #404EED); /* Discord-themed gradient */
+  background: linear-gradient(90deg, #8a2be2, #4b0082); /* same gradient as others */
   color: white;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* same shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 1000;
 }
 
 .discord-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(88, 101, 242, 0.5);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 .home-btn {
