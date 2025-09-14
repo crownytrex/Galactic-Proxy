@@ -72,7 +72,7 @@ body {
   box-shadow: 0 6px 16px rgba(0, 255, 157, 0.5);
 }
 
-/* Discord Button */
+/* Discord Button (emoji version) */
 .discord-btn {
   position: absolute;
   top: 170px;
@@ -80,30 +80,16 @@ body {
   padding: 10px 20px;
   font-size: 1em;
   border-radius: 8px;
-  background: rgba(88, 101, 242, 0.15);
+  background: linear-gradient(90deg, #5865F2, #404EED);
   color: white;
   text-decoration: none;
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 0 10px rgba(88, 101, 242, 0.4);
-  border: 1px solid rgba(88, 101, 242, 0.5);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 1000;
 }
 
 .discord-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 16px rgba(88, 101, 242, 0.8);
-}
-
-.discord-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  border-radius: 4px;
-  background-color: white;
-  padding: 2px;
+  box-shadow: 0 6px 16px rgba(88, 101, 242, 0.5);
 }
