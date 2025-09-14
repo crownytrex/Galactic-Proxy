@@ -200,6 +200,9 @@ button:hover {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -207,4 +210,10 @@ button:hover {
 .discord-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(88, 101, 242, 0.5);
+}
+
+.discord-icon {
+  width: 24px;
+  height: auto;
+  border-radius: 4px;
 }
