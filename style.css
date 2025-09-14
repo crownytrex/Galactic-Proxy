@@ -191,12 +191,12 @@ button:hover {
 
 .discord-btn {
   position: absolute;
-  top: 370px;
+  top: 220px; /* Adjusted from 370px */
   left: 20px;
   padding: 10px 20px;
   font-size: 1em;
   border-radius: 8px;
-  background: rgba(88, 101, 242, 0.15); /* subtle Discord blue glow */
+  background: rgba(88, 101, 242, 0.15);
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -223,3 +223,4 @@ button:hover {
   background-color: white;
   padding: 2px;
 }
+
