@@ -196,15 +196,15 @@ button:hover {
   padding: 10px 20px;
   font-size: 1em;
   border-radius: 8px;
-  background: rgba(88, 101, 242, 0.2); /* semi-transparent Discord blue */
+  background: rgba(88, 101, 242, 0.15); /* subtle Discord blue glow */
   color: white;
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
-  border: 1px solid rgba(88, 101, 242, 0.6);
+  box-shadow: 0 0 10px rgba(88, 101, 242, 0.4);
+  border: 1px solid rgba(88, 101, 242, 0.5);
   backdrop-filter: blur(4px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 1000;
