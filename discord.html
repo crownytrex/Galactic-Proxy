@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discord Chat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d2b;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .open-btn {
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #5865F2, #404EED);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .open-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    #discord-container {
+      width: 80%;
+      height: 600px;
+      margin-top: 30px;
+      display: none;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="open-btn" onclick="openDiscord()">💬 Open Discord Chat</button>
+  <div id="discord-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
+  <script>
+    function openDiscord() {
+      document.getElementById('discord-container').style.display = 'block';
+
+      new Crate({
+        server: '1416650085265182822', // Galactic Proxy's
+        channel: '1416650330774437978', // #🔗links
+        container: '#discord-container'
+      });
+    }
+  </script>
+
+</body>
+</html>
