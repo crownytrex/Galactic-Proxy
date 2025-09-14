@@ -40,9 +40,6 @@ html
 📦 Installation
 Clone the repository:
 
-bash
-git clone https://github.com/yourusername/galactic-proxy-cloak.git
-cd galactic-proxy-cloak
 Then open index.html in your browser.
 
 ✨ Customization Ideas
