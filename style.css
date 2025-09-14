@@ -191,29 +191,35 @@ button:hover {
 
 .discord-btn {
   position: absolute;
-  top: 320px;
+  top: 370px;
   left: 20px;
   padding: 10px 20px;
   font-size: 1em;
   border-radius: 8px;
-  background: linear-gradient(90deg, #5865F2, #404EED);
+  background: rgba(88, 101, 242, 0.2); /* semi-transparent Discord blue */
   color: white;
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+  box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
+  border: 1px solid rgba(88, 101, 242, 0.6);
+  backdrop-filter: blur(4px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
 }
 
 .discord-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(88, 101, 242, 0.5);
+  box-shadow: 0 0 16px rgba(88, 101, 242, 0.8);
 }
 
 .discord-icon {
   width: 24px;
-  height: auto;
+  height: 24px;
+  object-fit: contain;
   border-radius: 4px;
+  background-color: white;
+  padding: 2px;
 }
