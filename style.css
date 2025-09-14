@@ -156,7 +156,7 @@ button:hover {
   font-size: 1em;
   border-radius: 8px;
   background: linear-gradient(90deg, #00ff9d, #00cc7a);
-  color: #1a1a1a;
+  color: white;
   text-decoration: none;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0, 255, 157, 0.3);
