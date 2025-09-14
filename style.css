@@ -169,12 +169,12 @@ button:hover {
 }
 .discord-btn {
   position: absolute;
-  top: 320px;
+  top: 320px; /* consistent vertical spacing */
   left: 20px;
-  padding: 8px 16px; /* smaller padding */
-  font-size: 0.95em;  /* slightly smaller text */
+  padding: 10px 20px; /* same padding as other buttons */
+  font-size: 1em;      /* same font size */
   border-radius: 8px;
-  background: linear-gradient(90deg, #5865F2, #404EED);
+  background: linear-gradient(90deg, #5865F2, #404EED); /* Discord-themed gradient */
   color: white;
   text-decoration: none;
   font-weight: 600;
