@@ -171,8 +171,8 @@ button:hover {
   position: absolute;
   top: 320px;
   left: 20px;
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 8px 16px; /* smaller padding */
+  font-size: 0.95em;  /* slightly smaller text */
   border-radius: 8px;
   background: linear-gradient(90deg, #5865F2, #404EED);
   color: white;
@@ -180,6 +180,7 @@ button:hover {
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
 }
 
 .discord-btn:hover {
