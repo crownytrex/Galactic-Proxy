@@ -1,80 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galactic Proxy</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: linear-gradient(to right, #0d0d2b, #1a1a40);
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #0d0d2b, #1a1a40);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000;
+}
 
-    input[type="text"] {
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      width: 300px;
-      font-size: 1em;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
+input[type="text"] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.2s ease;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 8px;
-      background: linear-gradient(90deg, #8e2de2, #4a00e0);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+input[type="text"]:focus {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  outline: none;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
-    }
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
 
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      opacity: 0.6;
-    }
-  </style>
-</head>
-<body>
-  <h1>🌌 Galactic Proxy</h1>
-  <input type="text" id="urlInput" placeholder="Enter URL (e.g. https://example.com)" />
-  <button id="cloakBtn" class="btn">🪐 Cloak & Launch</button>
-  <button id="openSelfBtn" class="btn">🌀 Open This Page in about:blank</button>
-  <button id="musicBtn" class="btn">🎵 Launch Music Portal</button>
-  <a href="settings.html" class="btn">⚙️ Settings</a>
-  <a href="test.html" class="btn">🧪 Test Page</a>
-  <a href="https://discord.gg/Bg5TrNasHP" target="_blank" class="btn">💬 Discord</a>
-  <a href="https://github.com/crownytrex/Galactic-Proxy/archive/refs/heads/main.zip" class="btn" download>⬇️ Download</a>
-  <a href="https://github.com/crownytrex/HtmlCustomGSForSis" target="_blank" class="btn">🧠 View on GitHub</a>
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
 
-  <div class="footer">Galactic Proxy cloak by @crownytrex v1.3.2</div>
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  opacity: 0.6;
+}
