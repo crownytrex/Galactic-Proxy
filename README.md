@@ -39,6 +39,10 @@ html
 <link rel="icon" href="https://i.imgur.com/bRZDu4A.png" type="image/png" />
 📦 Installation
 Clone the repository:
+```git clone https://github.com/crownytrex/Galactic-Proxy.git```
+```npm install```
+```npm start```
+
 
 Then open index.html in your browser.
 
