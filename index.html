@@ -1,71 +1,38 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: linear-gradient(to right, #0d0d2b, #1a1a40);
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="icon" href="favicon.ico" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="https://github.com/crownytrex/Galactic-Proxy/archive/refs/heads/main.zip" 
+     class="download-btn" 
+     download>⬇️ Download Galactic Proxy</a>
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px #000;
-}
+  <a href="settings.html" class="settings-btn">⚙️ Settings</a>
+  <button id="openSelfBtn">🪐 Open in about:blank</button>
+  <a href="duckmath.html" class="duckmath-btn">🦆 DuckMath – Sponsor</a>
+  <button id="musicBtn">🎵 Launch Music Portal</button>
+  <a href="test.html" class="test-btn">🧪 Go to Test Page</a>
+  <a href="https://discord.gg/Bg5TrNasHP" target="_blank" class="discord-btn">💬 Discord</a>
 
-input[type="text"] {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  width: 300px;
-  font-size: 1em;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  transition: box-shadow 0.2s ease;
-}
+  <a href="https://github.com/crownytrex/HtmlCustomGSForSis" 
+     target="_blank" 
+     class="github-btn">🧠 View on GitHub</a>
 
-input[type="text"]:focus {
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-  outline: none;
-}
-
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 24px;
-  font-size: 1em;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #8e2de2, #4a00e0);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
-}
-
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-.footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  opacity: 0.6;
-}
+  <h1>🌌 Galactic Cloak</h1>
+ <input type="text" id="urlInput" placeholder="Enter URL (e.g. https://example.com)" />
+<button id="cloakBtn">Cloak & Launch</button>
+  <div class="footer">Galactic Proxy cloak by @crownytrex v1.3.2</div>
+  <script src="script.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '1416650085265182822', // Galactic Proxy's
+        channel: '1416650330774437978' // #🔗links
+    })
+</script>
+</body>
+</html>
