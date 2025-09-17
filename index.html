@@ -33,5 +33,28 @@
         channel: '1416650330774437978' // #🔗links
     })
 </script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCGYkahhkYDoEe1nVabuJKwi8SZ3bPFR4o",
+    authDomain: "galactic-router.firebaseapp.com",
+    projectId: "galactic-router",
+    storageBucket: "galactic-router.firebasestorage.app",
+    messagingSenderId: "155858395047",
+    appId: "1:155858395047:web:9a558d73286924d96d6082",
+    measurementId: "G-9RS8867LJY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
