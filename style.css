@@ -257,3 +257,10 @@ button:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
+body {
+  background: linear-gradient(to right, #0d0d2b, #1a1a40);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
