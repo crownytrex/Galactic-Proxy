@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galactic Cloak</title>
+  <link rel="icon" href="favicon.ico" type="image/png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crownytrex/Galactic-Proxy@refs/heads/main/style.css" />
+  <style>
+    .section { display: none; }
+    .active { display: block; }
+    nav { margin-bottom: 20px; }
+    nav button, nav a {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    nav button:hover, nav a:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button onclick="showSection('home')">🏠 Home</button>
+    <button onclick="showSection('settings')">⚙️ Settings</button>
+    <a href="duckmath.html" target="_blank">🦆 DuckMath</a>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="home" class="section active">
+    <a href="https://github.com/crownytrex/Galactic-Proxy/archive/refs/heads/main.zip" class="download-btn" download>⬇️ Download Galactic Proxy</a>
+    <button id="openSelfBtn">🛰️ Open in about:blank</button>
+    <button id="musicBtn">🎵 Launch Music Portal</button>
+    <a href="https://discord.gg/Bg5TrNasHP" target="_blank" class="discord-btn">💬 Discord</a>
+    <a href="https://github.com/crownytrex/HtmlCustomGSForSis" target="_blank" class="github-btn">🧠 View on GitHub</a>
+
+    <h1>🌌 Galactic Cloak</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL (e.g. https://example.com)" />
+    <button id="cloakBtn">Cloak & Launch</button>
+
+    <div class="footer">Galactic Proxy cloak by @crownytrex v1.3.2</div>
+  </div>
+
+  <!-- Settings Section -->
+  <div id="settings" class="section">
+    <h1>⚙️ Settings</h1>
+    <label><input type="checkbox" id="cloakToggle" /> Enable Advanced Cloaking</label><br><br>
+    <label>Custom Tab Title: <input type="text" id="titleInput" /></label><br><br>
+    <label>Custom Favicon URL: <input type="text" id="faviconInput" /></label><br><br>
+    <button onclick="saveSettings()">💾 Save Settings</button>
+    <div class="footer">Settings saved to localStorage</div>
+  </div>
+
+  <!-- External JS -->
+  <script src="https://cdn.jsdelivr.net/gh/crownytrex/Galactic-Proxy@refs/heads/main/script.js"></script>
+
+  <!-- Section Toggle Script -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function saveSettings() {
+      localStorage.setItem('cloakEnabled', document.getElementById('cloakToggle').checked);
+      localStorage.setItem('customTitle', document.getElementById('titleInput').value);
+      localStorage.setItem('customFavicon', document.getElementById('faviconInput').value);
+      alert('Settings saved!');
+    }
+
+    window.onload = () => {
+      document.getElementById('cloakToggle').checked = localStorage.getItem('cloakEnabled') === 'true';
+      document.getElementById('titleInput').value = localStorage.getItem('customTitle') || '';
+      document.getElementById('faviconInput').value = localStorage.getItem('customFavicon') || '';
+    };
+  </script>
+
+  <!-- Discord Widget -->
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    new Crate({
+      server: '1416650085265182822',
+      channel: '1416650330774437978'
+    })
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2181930010762041" crossorigin="anonymous"></script>
+</body>
+</html>
